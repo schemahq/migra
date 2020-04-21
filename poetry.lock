@@ -547,7 +547,7 @@ six = "*"
 sqlalchemy = "*"
 
 [package.source]
-reference = "0cd2c2fb825d91b3f47154fc8b10e923fa2d3e2e"
+reference = "9a471103b7543e6ca708b45b218a5c8c57304ac8"
 type = "git"
 url = "https://github.com/schemahq/schemainspect.git"
 [[package]]
