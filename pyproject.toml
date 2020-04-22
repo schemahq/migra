@@ -16,7 +16,7 @@ homepage = "https://migra.djrobstep.com/"
 python = "*"
 sqlbag = "*"
 six = "*"
-schemahq-schemainspect = "1.0.0"
+schemahq-schemainspect = "*"
 psycopg2-binary = { version="*", optional = true }
 
 [tool.poetry.dev-dependencies]
