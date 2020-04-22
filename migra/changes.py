@@ -104,7 +104,7 @@ def statements_from_differences(
                         pending_creations.remove(k)
         if modifications:
             for k, v in modified.items():
-                if hasattr(v, 'update_statement'):
+                if hasattr(v, "update_statement"):
                     statements.append(v.update_statement)
                     pending_drops.remove(k)
                     pending_creations.remove(k)
