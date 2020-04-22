@@ -536,20 +536,16 @@ version = "1.10.0"
 
 [[package]]
 category = "main"
-description = ""
-name = "schemainspect"
+description = "Schema inspection for PostgreSQL (and possibly others)"
+name = "schemahq-schemainspect"
 optional = false
 python-versions = "*"
-version = "0.1"
+version = "1.0.0"
 
 [package.dependencies]
 six = "*"
 sqlalchemy = "*"
 
-[package.source]
-reference = "9a471103b7543e6ca708b45b218a5c8c57304ac8"
-type = "git"
-url = "https://github.com/schemahq/schemainspect.git"
 [[package]]
 category = "main"
 description = "Python 2 and 3 compatibility utilities"
@@ -653,7 +649,7 @@ testing = ["pathlib2", "unittest2", "jaraco.itertools", "func-timeout"]
 pg = ["psycopg2-binary"]
 
 [metadata]
-content-hash = "67891e44c5b11f2dc13313987a144e4acd7d7b82c23abbaf7d943957db89b4f5"
+content-hash = "bd0ebb26252d8836b3595cb932a7f555c64ab6857fb714b7fd5ff364f3d5db3a"
 python-versions = "*"
 
 [metadata.files]
@@ -961,7 +957,10 @@ scandir = [
     {file = "scandir-1.10.0-cp37-cp37m-win_amd64.whl", hash = "sha256:b24086f2375c4a094a6b51e78b4cf7ca16c721dcee2eddd7aa6494b42d6d519d"},
     {file = "scandir-1.10.0.tar.gz", hash = "sha256:4d4631f6062e658e9007ab3149a9b914f3548cb38bfb021c64f39a025ce578ae"},
 ]
-schemainspect = []
+schemahq-schemainspect = [
+    {file = "schemahq-schemainspect-1.0.0.tar.gz", hash = "sha256:fe70c7444faa20478996f11cbcd748392818870ec8dc3a172c16aca3a827e98f"},
+    {file = "schemahq_schemainspect-1.0.0-py2.py3-none-any.whl", hash = "sha256:baf4db10935afaed83cb097c086d6328d8198a2f66e57ead925c717828328c13"},
+]
 six = [
     {file = "six-1.14.0-py2.py3-none-any.whl", hash = "sha256:8f3cd2e254d8f793e7f3d6d9df77b92252b52637291d0f0da013c76ea2724b6c"},
     {file = "six-1.14.0.tar.gz", hash = "sha256:236bdbdce46e6e6a3d61a337c0f8b763ca1e8717c03b369e87a7ec7ce1319c0a"},
