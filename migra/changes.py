@@ -103,16 +103,21 @@ def statements_from_differences(
                         pending_creations.remove(k)
         if modifications:
             for k, v in modified.items():
-                if not creations_only:
-                    if not has_remaining_dependents(v, pending_drops):
-                        if k in pending_drops:
-                            statements.append(old[k].drop_statement)
-                            pending_drops.remove(k)
-                if not drops_only:
-                    if not has_uncreated_dependencies(v, pending_creations):
-                        if k in pending_creations:
-                            statements.append(v.create_statement)
-                            pending_creations.remove(k)
+                if hasattr(v, 'update_statement'):
+                    statements.append(v.update_statement)
+                    pending_drops.remove(k)
+                    pending_creations.remove(k)
+                else:
+                    if not creations_only:
+                        if not has_remaining_dependents(v, pending_drops):
+                            if k in pending_drops:
+                                statements.append(old[k].drop_statement)
+                                pending_drops.remove(k)
+                    if not drops_only:
+                        if not has_uncreated_dependencies(v, pending_creations):
+                            if k in pending_creations:
+                                statements.append(v.create_statement)
+                                pending_creations.remove(k)
         after = pending_drops | pending_creations
         if not after:
             break
