@@ -17,6 +17,7 @@ THINGS = [
     "extensions",
     "privileges",
     "schema_privileges",
+    "sequence_privileges",
     "collations",
     "rlspolicies",
     "triggers",
