@@ -47,7 +47,7 @@ class Migration(object):
         self.set_safety(safety_on)
 
     def add(self, statements):
-        self.statements += statements
+        self.statements += [statement for statement in statements if statement != ""]
 
     def add_sql(self, sql):
         self.statements += Statements([sql])
