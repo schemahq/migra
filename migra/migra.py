@@ -80,6 +80,7 @@ class Migration(object):
             self.add(self.changes.privileges(drops_only=True))
             self.add(self.changes.schema_privileges(drops_only=True))
             self.add(self.changes.sequence_privileges(drops_only=True))
+            self.add(self.changes.column_privileges(drops_only=True))
         self.add(self.changes.non_pk_constraints(drops_only=True))
         self.add(self.changes.pk_constraints(drops_only=True))
         self.add(self.changes.indexes(drops_only=True))
@@ -96,6 +97,7 @@ class Migration(object):
             self.add(self.changes.privileges(creations_only=True))
             self.add(self.changes.schema_privileges(creations_only=True))
             self.add(self.changes.sequence_privileges(creations_only=True))
+            self.add(self.changes.column_privileges(creations_only=True))
             if roles:
                 self.add(self.changes.memberships(creations_only=True))
         self.add(self.changes.rlspolicies(creations_only=True))

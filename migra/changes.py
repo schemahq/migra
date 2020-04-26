@@ -18,6 +18,7 @@ THINGS = [
     "privileges",
     "schema_privileges",
     "sequence_privileges",
+    "column_privileges",
     "collations",
     "rlspolicies",
     "triggers",
